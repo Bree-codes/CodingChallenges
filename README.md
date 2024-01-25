@@ -1,1 +1,1 @@
-Java Brains codes to boost problem solving abilities..
+Java Brains codes to boost problem solving skills..
