@@ -25,5 +25,3 @@ public class Main {
         System.out.println("The indexes for the values that add up to the target are : " + result[0] + ", " + result[1]);
     }
 }
-
-
