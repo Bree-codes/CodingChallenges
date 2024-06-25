@@ -11,7 +11,7 @@ public class Main {
 
         System.out.println("The number " + num + " is at index: " + k);
 
-        int[] newArray = solutions.deleteElement(arr,3);
+        int[] newArray = solutions.deleteElement(arr,10);
         System.out.println(Arrays.toString(newArray));
     }
 }

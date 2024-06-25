@@ -13,7 +13,8 @@ public class Solutions {
     //deleting an element given the index
     public int[] deleteElement(int[] arr, int index){
         if(index < 0 || index >= arr.length){
-            throw new IllegalArgumentException("The index you entered is beyond the range of the given array!");
+            //throw new IllegalArgumentException("The index you entered is beyond the range of the given array!");
+            System.out.println("The index you entered is beyond the range of the given array!");
         }
         int[] newArray = new int[arr.length - 1];
 
