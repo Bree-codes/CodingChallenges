@@ -19,6 +19,7 @@ public class Solutions {
 
         for (int i = 0, j = 0; i < arr.length; i++) {
             if (i != index) {
+                //j increments only when the element in ith position is copied to index j of the new array
                 newArray[j++] = arr[i];
             }
         }
