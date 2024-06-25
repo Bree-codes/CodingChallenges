@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args){
 
@@ -8,5 +10,8 @@ public class Main {
         int k = solutions.searchElement(arr,num);
 
         System.out.println("The number " + num + " is at index: " + k);
+
+        int[] newArray = solutions.deleteElement(arr,3);
+        System.out.println(Arrays.toString(newArray));
     }
 }

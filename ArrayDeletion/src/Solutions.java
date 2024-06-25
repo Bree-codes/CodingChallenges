@@ -18,4 +18,5 @@ public class Solutions {
         int[] newArray = new int[arr.length - 1];
         return newArray;
     }
+
 }
