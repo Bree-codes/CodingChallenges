@@ -16,6 +16,12 @@ public class Solutions {
             throw new IllegalArgumentException("The index you entered is beyond the range of the given array!");
         }
         int[] newArray = new int[arr.length - 1];
+
+        for (int i = 0, j = 0; i < arr.length; i++) {
+            if (i != index) {
+                newArray[j++] = arr[i];
+            }
+        }
         return newArray;
     }
 
