@@ -10,7 +10,12 @@ public class Solutions {
         return -1;
     }
 
-    public static void deleteElement(int[] arr,int num){
-        if()
+    //deleting an element given the index
+    public int[] deleteElement(int[] arr, int index){
+        if(index < 0 || index >= arr.length){
+            throw new IllegalArgumentException("The index you entered is beyond the range of the given array!");
+        }
+        int[] newArray = new int[arr.length - 1];
+        return newArray;
     }
 }
