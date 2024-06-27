@@ -9,7 +9,7 @@ public class Main {
             System.out.print(arr[i] + " ");
 
         }
-
+        //Sorting the array using insertion sort
         for(i = 1;i< arr.length;i++){
             int key = arr[i];
             j = i - 1;
