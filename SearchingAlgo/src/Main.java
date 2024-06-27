@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -6,7 +8,10 @@ public class Main {
 
         LinearSearch linearSearch = new LinearSearch();
         int n = linearSearch.solution(arr,num);
+        System.out.println("The index of element " +num + " is: " +n);
 
-        System.out.println("The index is: " +n);
+        int[] newArray = linearSearch.deleteElement(arr,12);
+        System.out.println(Arrays.toString(newArray));
+
     }
 }
