@@ -23,6 +23,9 @@ public class Solution{
         // Insert the new number
         newArr[insertIndex] = num;
 
+        // Print the insertion index
+        System.out.println("New number inserted at index: " + insertIndex);
+
         // Copy the remaining elements
         for (int i = insertIndex; i < arr.length; i++) {
             newArr[i + 1] = arr[i];
