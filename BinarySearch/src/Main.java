@@ -5,5 +5,7 @@ public class Main {
         int target = 100;
 
         Solution solution = new Solution();
+        int index = solution.binarySearch(arr,target);
+        System.out.println("The element is at index: " + index);
     }
 }
