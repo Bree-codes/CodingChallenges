@@ -16,7 +16,7 @@ public class Solution {
             else if(target < value){
                 high = middle - 1;
             }
-            else return value;
+            else return middle;
         }
         return -1;
     }
