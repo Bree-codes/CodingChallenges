@@ -18,6 +18,6 @@ public class Solution {
             }
             else return middle;
         }
-        return -1;
+        return low;
     }
 }
