@@ -8,9 +8,9 @@ public class Main {
 
         Solution solution = new Solution();
         List<Integer> years = solution.generateLeapYears(startYear,endYear);
-        System.out.println("These are the leap years between " + startYear + " and " + endYear + ":");
+        System.out.println("These are the leap years between " + startYear + " and " + endYear + ":" );
 
-        for (int year : years) {
+        for (int year: years) {
             System.out.println(year);
         }
 
