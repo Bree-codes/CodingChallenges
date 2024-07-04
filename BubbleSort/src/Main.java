@@ -15,12 +15,11 @@ public class Main {
                     arr[j] = arr[j+1];
                     arr[j+1] = temp;
                 }
-
-                for(int n : arr){
-                    System.out.print(n+"\t");
-                }
-                System.out.println("\n");
             }
+            for(int n : arr){
+                System.out.print(n+"\t");
+            }
+            System.out.println("Loop"+i+"\n");
         }
         return arr;
     }
