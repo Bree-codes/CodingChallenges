@@ -7,7 +7,7 @@ public class Main {
         System.out.println(Arrays.toString(arr));
 
     }
-    public static int[] bubbleSort(int[] arr){
+    public static void bubbleSort(int[] arr){
         for(int i = 0; i< arr.length; i++){
             for(int j = 0; j< arr.length-i-1; j++){
                 if(arr[j] > arr[j+1]){
@@ -15,12 +15,11 @@ public class Main {
                     arr[j] = arr[j+1];
                     arr[j+1] = temp;
                 }
+                for(int n : arr){
+                    System.out.print(n+"\t");
+                }
+                System.out.println("Loop"+i+"\n");
             }
-            for(int n : arr){
-                System.out.print(n+"\t");
-            }
-            System.out.println("Loop"+i+"\n");
         }
-        return arr;
     }
 }
