@@ -11,7 +11,7 @@ public class Solution {
         int i = 0; //left array
         int j = 0; //right array
 
-       for(; i < length; i++) {
+      for(; i < length; i++) {
            if(i < middle) {
                leftArray[i] = array[i];
            }
@@ -20,6 +20,10 @@ public class Solution {
                j++;
            }
        }
+/*
+       System.arraycopy(array, 0, leftArray, 0, leftArray.length);
+       System.arraycopy(array, middle, rightArray, 0, rightArray.length);
+       */
         mergeSort(leftArray);
         mergeSort(rightArray);
         merge(leftArray, rightArray, array);
