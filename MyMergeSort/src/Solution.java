@@ -19,6 +19,36 @@ public class Solution {
 
         mergeSort(leftArray);
         mergeSort(rightArray);
+        merge(arr,rightArray,leftArray);
+    }
+    public void merge(int[] arr,int[]leftArray,int[] rightArray){
+        int length = arr.length;
+
+        int leftLength = leftArray.length;
+        int righLength = rightArray.length;
+        int i = 0,j = 0,k=0;
+        while(i <leftLength && j< righLength ){
+            if(leftArray[i] < rightArray[j]){
+                arr[k] = leftArray[i];
+                i++;
+                k++;
+            }
+            else{
+                arr[k] = rightArray[j];
+                j++;
+                k++;
+            }
+        }
+        while(i< leftLength){
+            arr[k] = leftArray[i];
+            i++;
+            k++;
+        }
+        while(j< righLength){
+            arr[k] = rightArray[j];
+            j++;
+            k++;
+        }
 
     }
 }
