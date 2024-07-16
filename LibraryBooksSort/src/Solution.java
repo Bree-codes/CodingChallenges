@@ -2,9 +2,8 @@ public class Solution {
     //Here we have the 2 main methods merge sorting the random numbers
     //then binary searching for the specific num we need
 
-    //merge sort
-    public void mergeSort(int[] arr){
-
+    //Merge sort
+    public void mergeSort(int[] arr) {
         int length = arr.length;
 
         if (length <= 1) return;
@@ -13,42 +12,45 @@ public class Solution {
         int[] leftArray = new int[mid];
         int[] rightArray = new int[length - mid];
 
+        // Copying elements to the left array
+        System.arraycopy(arr, 0, leftArray, 0, mid);
 
-        for(int i = 0 ; i < length ; i++){
-            if(i < mid){
-                leftArray[i] = arr[i];
-            }
-            else{
-                rightArray[i - mid] = arr[i];
-            }
+        // Copying elements to the right array
+        for (int i = mid; i < length; i++) {
+            rightArray[i - mid] = arr[i];
         }
 
         mergeSort(leftArray);
         mergeSort(rightArray);
-        merge(arr,rightArray,leftArray);
+        merge(arr, leftArray, rightArray);
     }
-    public void merge(int[] arr,int[]leftArray,int[] rightArray){
 
+    public void merge(int[] arr, int[] leftArray, int[] rightArray) {
         int leftLength = leftArray.length;
         int rightLength = rightArray.length;
-        int i = 0,j = 0,k=0;
-        while(i <leftLength && j< rightLength ){
-            if(leftArray[i] < rightArray[j]){
+        int i = 0, j = 0, k = 0;
+
+        // Merging the arrays
+        while (i < leftLength && j < rightLength) {
+            if (leftArray[i] <= rightArray[j]) {
                 arr[k] = leftArray[i];
                 i++;
-            }
-            else{
+            } else {
                 arr[k] = rightArray[j];
                 j++;
             }
             k++;
         }
-        while(i< leftLength){
+
+        // Copying remaining elements of leftArray
+        while (i < leftLength) {
             arr[k] = leftArray[i];
             i++;
             k++;
         }
-        while(j< rightLength){
+
+        // Copying remaining elements of rightArray
+        while (j < rightLength) {
             arr[k] = rightArray[j];
             j++;
             k++;
@@ -65,7 +67,6 @@ public class Solution {
 
             int middle = low + (high - low) / 2;
             int value = arr[middle];
-            System.out.println(value);
 
             if(target > value){
                 low = middle + 1;
@@ -73,8 +74,12 @@ public class Solution {
             else if(target < value){
                 high = middle - 1;
             }
-            else return;
+            else {
+                System.out.println("Target " + target + " found at index " + middle);
+                return;
+            }
         }
+        System.out.println("Target not found in the array!");
     }
 
 }

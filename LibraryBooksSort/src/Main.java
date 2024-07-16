@@ -10,15 +10,16 @@ public class Main {
 
         int[] randomNumsArray = new int[noOfRandomNums];
 
-        for(int i = 0 ; i < noOfRandomNums; i++){
-          randomNumsArray[i] = random.nextInt(100);
+        for (int i = 0; i < noOfRandomNums; i++) {
+            randomNumsArray[i] = random.nextInt(100);
         }
-        System.out.print(Arrays.toString(randomNumsArray));
+        System.out.println("Generated Random Array: " + Arrays.toString(randomNumsArray));
 
-        //Creating an instance of Solution class
+        // Creating an instance of Solution class
         Solution solution = new Solution();
         solution.mergeSort(randomNumsArray);
-        //solution.binarySearch(randomNumsArray,45);
-
+        System.out.println("Sorted array: " + Arrays.toString(randomNumsArray));
+        System.out.println();
+        solution.binarySearch(randomNumsArray,51);
     }
 }
