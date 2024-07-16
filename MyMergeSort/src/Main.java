@@ -4,6 +4,7 @@ public class Main {
 
         Solution solution = new Solution();
         solution.mergeSort(arr);
+
         for(int i: arr){
             System.out.print(i + " ");
         }
