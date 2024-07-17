@@ -16,9 +16,7 @@ public class Solution {
         System.arraycopy(arr, 0, leftArray, 0, mid);
 
         // Copying elements to the right array
-        for (int i = mid; i < length; i++) {
-            rightArray[i - mid] = arr[i];
-        }
+        if (length - mid >= 0) System.arraycopy(arr, mid, rightArray, 0, length - mid);
 
         mergeSort(leftArray);
         mergeSort(rightArray);
