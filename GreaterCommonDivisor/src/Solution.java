@@ -6,7 +6,8 @@ public class Solution {
             a = b;
             b = r;
         }
-        return a;  // The GCD is stored in a when b becomes 0
+        //when b becomes 0 then a is automatically the gcd..
+        return a;
     }
 }
 
