@@ -1,4 +1,3 @@
-import java.math.MathContext;
 import java.util.Random;
 
 public class Main {
