@@ -6,8 +6,8 @@ public class Main {
         int a = 120,b = 90;
 
         Solution solution = new Solution();
-       /* int gcd = solution.greatestCommonDivisor(a,b);
-        System.out.println("The gcd of "+ a +" and "+ b + " is: "+ gcd);*/
+        int gcd = solution.greatestCommonDivisor(a,b);
+        System.out.println("The gcd of "+ a +" and "+ b + " is: "+ gcd);
         int len = 1000;
         int[] array = new int[len];
         Random random = new Random();
