@@ -4,8 +4,8 @@ public class Main {
         Solution solution = new Solution();
 
         int[] array = {40, 20, 10, 5, 1};
-        int target = 223;
-        String ans = solution.minCoinDenoms(array, target);
+        int target = 22335453;
+        String ans = String.valueOf(solution.minCoinDenoms(array, target));
 
         System.out.println(ans);
     }
