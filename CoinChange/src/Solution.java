@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Solution {
 
     /**
@@ -29,6 +31,8 @@ public class Solution {
 
 
     public int coinChange(int[] coins, int amount) {
+        sort(coins);
+        System.out.println(Arrays.toString(coins));
         int div = 0;
         int len = coins.length;
         for(int i = len - 1; i >= 0; i--){
@@ -46,6 +50,59 @@ public class Solution {
           return -1;
 
         return div;
+    }
+
+
+    private void sort(int[] arr){
+        int len = arr.length;
+
+        if(len == 1)
+            return;
+
+        len = len-1;
+
+        int lenLeftArr = len/2;
+        int lenRightArr = len - lenLeftArr;
+
+        int[] leftArr = new int[lenLeftArr+1];
+        int[] rightArr = new int[lenRightArr];
+
+        System.arraycopy(arr, 0, leftArr, 0, lenLeftArr+1);
+        System.arraycopy(arr, lenLeftArr+1, rightArr, 0, lenRightArr);
+
+        sort(leftArr);
+        sort(rightArr);
+
+        merge(arr, leftArr, rightArr);
+    }
+
+
+    private void merge(int[] parent, int[] leftChild, int[] rightChild){
+        int i = 0, j = 0, k = 0;
+
+        while(i < leftChild.length && j < rightChild.length){
+            if(leftChild[i] < rightChild[j]) {
+                parent[k] = leftChild[i];
+                k++;
+                i++;
+            }else {
+                parent[k] = rightChild[j];
+                k++;
+                j++;
+            }
+        }
+
+        while (i < leftChild.length){
+            parent[k] = leftChild[i];
+            k++;
+            i++;
+        }
+
+        while (j < rightChild.length){
+            parent[k] = rightChild[j];
+            k++;
+            j++;
+        }
     }
 
 }

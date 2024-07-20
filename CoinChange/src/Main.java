@@ -3,10 +3,14 @@ public class Main {
 
         Solution solution = new Solution();
 
-        int[] array = {40, 20, 10, 5, 1};
-        int target = 22335453;
-        String ans = String.valueOf(solution.minCoinDenoms(array, target));
+        int[] array = {186,419,83,408};
+        int target = 11;
 
+
+        String ans = String.valueOf(solution.minCoinDenoms(array, target));
         System.out.println(ans);
+
+        int answer = solution.coinChange(array,target);
+        System.out.println(answer);
     }
 }
