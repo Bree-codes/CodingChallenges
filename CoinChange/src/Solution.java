@@ -46,6 +46,8 @@ public class Solution {
                 break;
             }
         }
+
+        System.out.println("amount : "+amount);
         if(amount != 0)
           return -1;
 
