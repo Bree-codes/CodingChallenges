@@ -36,11 +36,16 @@ public class Solution {
                 continue;
             }
             div = div + (amount / coins[i]);
+            amount = amount % coins[i];
 
-
+            if(amount == 0){
+                break;
+            }
         }
+        if(amount != 0)
+          return -1;
 
-        return 0;
+        return div;
     }
 
 }
