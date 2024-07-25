@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        Node node7 = new Node(70, null, null);
+        Node node7 = new Node(70,null,null);
         Node node6 = new Node(60, null, null);
         Node node5 = new Node(50, null, null);
         Node node4 = new Node(40, null, null);
