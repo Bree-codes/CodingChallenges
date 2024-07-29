@@ -12,7 +12,7 @@ public class Main {
         Vertex<String> vertexD = new Vertex<>("D");
         Vertex<String> vertexE = new Vertex<>("E");
         Vertex<String> vertexF = new Vertex<>("F");
-        Vertex<String> vertexG = new Vertex<>("G");
+       // Vertex<String> vertexG = new Vertex<>("G");
 
         List<Edge<String>> graph1 = Arrays.asList(
                 new Edge<>(vertexA, vertexB, 4),
