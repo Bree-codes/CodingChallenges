@@ -22,17 +22,7 @@ public class CycleDetection<T> {
             if (neighbor.isVisited() && !neighbor.equals(caller) || !neighbor.isVisited() && hasCycle(current, neighbor)) {
                 return true;
             }
-            /*
-                Equivalent Code:
-                ----------------
-                if (neighbor.isVisited()) {
-                    if (current.equals(neighbor) || !neighbor.equals(caller)) {
-                        return true;
-                    }
-                } else if (hasCycle(current, neighbor)) {
-                    return true;
-                }
-            */
+
         }
         return false;
     }

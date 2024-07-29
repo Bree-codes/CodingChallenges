@@ -6,14 +6,14 @@ import java.util.stream.Stream;
 
 public class KruskalAlgorithm<T> {
 
-    private final int nbrOfVertices;
+    private final int noOfVertices;
     private final List<Vertex<T>> vertices;
     private final PriorityQueue<Edge<T>> graph;
 
     public KruskalAlgorithm(List<Edge<T>> graph) {
         this.graph = new PriorityQueue<>(graph);
         vertices = getVerticesInGraph(graph);
-        nbrOfVertices = vertices.size();
+        noOfVertices = vertices.size();
     }
 
     public void run() {
@@ -24,7 +24,7 @@ public class KruskalAlgorithm<T> {
             if (!new CycleDetection<T>().hasCycle(vertices)) {
                 spanningTree.add(edge);
             }
-        } while (spanningTree.size() < nbrOfVertices - 1);
+        } while (spanningTree.size() < noOfVertices - 1);
         printTreeInfo(spanningTree);
     }
 
