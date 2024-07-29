@@ -1,5 +1,7 @@
 package com.bughunter.bree.code.UndirectedGraph;
 
+import com.bughunter.bree.code.Vertex;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -35,9 +37,6 @@ public class CycleDetection<T> {
         return false;
     }
 
-    /*
-     * Video Reference: https://youtu.be/Te9Fr9SHDqc
-     */
     public static void main(String[] args) {
 
         Vertex<String> vertexA = new Vertex<>("A");
