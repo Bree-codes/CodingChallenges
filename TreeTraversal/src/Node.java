@@ -9,7 +9,7 @@ public class Node {
         this.right = right;
     }
 
-    //inorder traversal
+    //inorder traversal left root right
     public void traverseTree(Node node){
 
         if(node == null)
@@ -20,7 +20,7 @@ public class Node {
         traverseTree(node.right);
     }
 
-    //postorder traversal
+    //postorder traversal left right root
     public void postorderTraversal(Node node){
         if(node == null)
             return;
@@ -29,7 +29,7 @@ public class Node {
         System.out.print(node.data+"\t");
     }
 
-    //preorder traversal
+    //preorder traversal root left right
     public void preorderTraversal(Node node){
         if(node == null)
             return;
