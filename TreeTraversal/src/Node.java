@@ -14,7 +14,7 @@ public class Node {
 
         if(node == null)
             return;
-
+        
         traverseTree(node.left);
         System.out.print(node.data+"\t");
         traverseTree(node.right);
