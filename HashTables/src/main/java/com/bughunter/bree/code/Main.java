@@ -14,8 +14,9 @@ public class Main {
         table.put(104,"Kiki");
         table.put(111,"Koko");
 
+        table.remove(104);
         for(Integer key : table.keySet()){
-            System.out.println(key.hashCode() + "\t" + key + "\t " + table.get(key));
+            System.out.println(key.hashCode() % 10 + "\t" + key + "\t " + table.get(key));
 
         }
 
