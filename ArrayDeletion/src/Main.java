@@ -3,6 +3,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args){
 
+        // Searching for the element
         int[] arr = {10,16,27,38,2,51,79};
         int num = 27;
 
