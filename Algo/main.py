@@ -16,3 +16,7 @@ def mySqrt(x: int) -> int:
             right = mid - 1
 
     return result
+
+x=25
+ans = mySqrt(x)
+print(f"The square root of {x} is: {ans}")
