@@ -1,15 +1,15 @@
-def mySqrt(x: int) -> int:
-    if x == 0 or x == 1:
-        return x
+def mySqrt(z: int) -> int:
+    if z == 0 or z == 1:
+        return z
 
-    left, right = 0, x
+    left, right = 0, z
     result = 0
 
     while left <= right:
         mid = (left + right) // 2
-        if mid * mid == x:
+        if mid * mid == z:
             return mid
-        elif mid * mid < x:
+        elif mid * mid < z:
             result = mid
             left = mid + 1
         else:
