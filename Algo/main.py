@@ -17,6 +17,6 @@ def mySqrt(z: int) -> int:
 
     return result
 
-x=25
+x=16
 ans = mySqrt(x)
 print(f"The square root of {x} is: {ans}")
