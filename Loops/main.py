@@ -1,20 +1,24 @@
-# 1. Easy
-"""nums = list(range(1,21))
+""" 1. Easy
+Print all even numbers from 2 to 20 (inclusive)"""
+
+nums = list(range(1,21))
 
 for i in nums:
     if i % 2 == 0:
         print(i,end=" ")
 
 
-# 2. Medium
+""" 2. Medium
+Given a list of words, print only those words which have more than 4 characters"""
+
 words = ["apple", "cat", "banana", "dog", "elephant"]
 
 print()
 filtered_words = [word for word in words if len(word) > 4]
-print(filtered_words)"""
+print(filtered_words)
 
-# 3. Hard
-"""Given a list of lists of integers, 
+""" 3. Hard
+Given a list of lists of integers, 
 flatten it into a single list containing only the unique elements, 
 sorted in ascending order, and print the result"""
 
