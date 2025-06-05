@@ -38,3 +38,6 @@ unique_nums = set(final_list)
 sorted_list = sorted(unique_nums)
 
 print(sorted_list)
+
+import math
+print(math.factorial(5))
